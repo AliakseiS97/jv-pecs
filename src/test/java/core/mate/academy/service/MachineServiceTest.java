@@ -56,7 +56,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Bulldozer());
+        machineService.fill(machines, new Bulldozer("ABC", 10_000, 5_000));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Bulldozer",
@@ -71,7 +71,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Excavator());
+        machineService.fill(machines, new Excavator("PC210", 1.2, 21_000));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Excavator",
@@ -86,7 +86,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Truck());
+        machineService.fill(machines, new Truck("FMX 460", 18_000, 460));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Truck",
@@ -99,7 +99,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_bulldozers() {
-        List<Bulldozer> bulldozers = List.of(new Bulldozer());
+        List<Bulldozer> bulldozers = List.of(new Bulldozer("ABC", 10_000, 5_000));
         machineService.startWorking(bulldozers);
     }
 
@@ -108,7 +108,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_excavators() {
-        List<Excavator> excavators = List.of(new Excavator());
+        List<Excavator> excavators = List.of(new Excavator("PC210", 1.2, 21_000));
         machineService.startWorking(excavators);
     }
 
@@ -117,7 +117,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_trucks() {
-        List<Truck> trucks = List.of(new Truck());
+        List<Truck> trucks = List.of(new Truck("FMX 460", 18_000, 460));
         machineService.startWorking(trucks);
     }
 }
