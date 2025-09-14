@@ -9,7 +9,13 @@ public class Bulldozer extends Machine {
     private int weight;
     private int enginePower;
 
-    public Bulldozer(String abc, int i, int i1) {
+    public Bulldozer() {
+    }
+
+    public Bulldozer(String model, int weight, int enginePower) {
+        this.model = model;
+        this.weight = weight;
+        this.enginePower = enginePower;
     }
 
     public String getModel() {

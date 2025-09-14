@@ -8,9 +8,15 @@ public class Excavator extends Machine {
 
     private String model;
     private double bucketCapacity;
-    private String operatingWeight;
+    private int operatingWeight;
 
-    public Excavator(String pc210, double v, int i) {
+    public Excavator() {
+    }
+
+    public Excavator(String model, double bucketCapacity, int operatingWeight) {
+        this.model = model;
+        this.bucketCapacity = bucketCapacity;
+        this.operatingWeight = operatingWeight;
     }
 
     public String getModel() {
@@ -29,11 +35,11 @@ public class Excavator extends Machine {
         this.bucketCapacity = bucketCapacity;
     }
 
-    public String getOperatingWeight() {
+    public int getOperatingWeight() {
         return operatingWeight;
     }
 
-    public void setOperatingWeight(String operatingWeight) {
+    public void setOperatingWeight(int operatingWeight) {
         this.operatingWeight = operatingWeight;
     }
 

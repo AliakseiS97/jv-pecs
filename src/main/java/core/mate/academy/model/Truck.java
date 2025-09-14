@@ -9,7 +9,13 @@ public class Truck extends Machine {
     private int loadCapacity;
     private int enginePower;
 
-    public Truck(String s, int i, int i1) {
+    public Truck() {
+    }
+
+    public Truck(String model, int loadCapacity, int enginePower) {
+        this.model = model;
+        this.loadCapacity = loadCapacity;
+        this.enginePower = enginePower;
     }
 
     public String getModel() {
